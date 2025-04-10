@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:preco_bitcoin/home.dart';
 
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     home: Home(),
     debugShowCheckedModeBanner: false,
   ));

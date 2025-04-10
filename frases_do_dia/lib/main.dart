@@ -2,7 +2,7 @@ import "package:flutter/material.dart";
 import "dart:math";
 
 void main(){
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Home(),
     ),
@@ -17,7 +17,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  var _phrases = [
+  final _phrases = [
     "A força não provém da capacidade física. Provém de uma vontade indomável. (Mahatma Gandhi)",
     "O pessimista se queixa do vento, o otimista espera que ele mude e o realista ajusta as velas. (William George Ward)",
     "O pessimista vê dificuldade em cada oportunidade; o otimista vê oportunidade em cada dificuldade. (Winston Churchill)",
@@ -105,12 +105,12 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Frases do Dia"),
+        title: const Text("Frases do Dia"),
         backgroundColor: Colors.green,
       ),
       body: Center(
         child: Container(
-          padding: EdgeInsets.all(16),
+          padding: const EdgeInsets.all(16),
           //width: double.infinity, // forma de ocupar toda largura
           /*decoration: BoxDecoration(
             border: Border.all(width: 3, color: Colors.amber),
@@ -123,22 +123,22 @@ class _HomeState extends State<Home> {
               Text(
                 _generatedPhrase,
                 textAlign: TextAlign.justify,
-                style: TextStyle(
+                style: const TextStyle(
                     fontSize: 25,
                     fontStyle: FontStyle.italic,
                     color: Colors.black
                 ),
               ),
               ElevatedButton(
-                  child: Text(
+                  onPressed: _generatePhrase,
+                  child: const Text(
                     "Nova Frase",
                     style: TextStyle(
                         fontSize: 24,
                         color: Colors.grey,
                         fontWeight: FontWeight.bold
                     ),
-                  ),
-                  onPressed: _generatePhrase
+                  )
               )
             ],
           ),

@@ -29,7 +29,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.all(32),
+        padding: const EdgeInsets.all(32),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -37,24 +37,24 @@ class _HomeState extends State<Home> {
             children: [
               Image.asset("images/bitcoin.png"),
               Padding(
-                padding: EdgeInsets.only(top: 30, bottom: 30),
+                padding: const EdgeInsets.only(top: 30, bottom: 30),
                 child: Text(
-                  "R\$ ${_preco}",
-                  style: TextStyle(
+                  "R\$ $_preco",
+                  style: const TextStyle(
                     fontSize: 35,
                   ),
                 ),
               ),
               TextButton(
                 onPressed: () => _atualizaPreco(),
-                child: Text(
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.orange
+                ),
+                child: const Text(
                   "Atualizar",
                   style: TextStyle(
                     color: Colors.white
                   ),
-                ),
-                style: TextButton.styleFrom(
-                  backgroundColor: Colors.orange
                 ),
               ),
             ],

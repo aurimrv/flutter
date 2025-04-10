@@ -20,14 +20,14 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     List<Widget> telas = [
       Inicio( _resultado ),
-      EmAlta(),
-      Inscricoes(),
-      Biblioteca()
+      const EmAlta(),
+      const Inscricoes(),
+      const Biblioteca()
     ];
 
     return Scaffold(
       appBar: AppBar(
-        iconTheme: IconThemeData(
+        iconTheme: const IconThemeData(
           color: Colors.grey,
           opacity: 1,
         ),
@@ -49,7 +49,7 @@ class _HomeState extends State<Home> {
                 _resultado = res!;
               });
             },
-            icon: Icon(Icons.search),
+            icon: const Icon(Icons.search),
           ),
 
           /*
@@ -68,7 +68,7 @@ class _HomeState extends State<Home> {
         ],
       ),
       body: Container(
-        padding: EdgeInsets.all(16),
+        padding: const EdgeInsets.all(16),
         child: telas[_indiceAtual],
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -80,7 +80,7 @@ class _HomeState extends State<Home> {
         },
         type: BottomNavigationBarType.fixed,
         fixedColor: Colors.red,
-        items: [
+        items: const [
           BottomNavigationBarItem(
             //backgroundColor: Colors.orange,
             label: "Home",

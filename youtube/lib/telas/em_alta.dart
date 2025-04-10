@@ -11,7 +11,7 @@ class _EmAltaState extends State<EmAlta> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text(
+      child: const Text(
         "Em Alta",
         style: TextStyle(
             fontSize: 25

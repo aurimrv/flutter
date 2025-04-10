@@ -13,19 +13,19 @@ class _TelaClienteState extends State<TelaCliente> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text("Cliente"),
+        title: const Text("Cliente"),
         backgroundColor: Colors.green,
       ),
       body: SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.all(16),
+          padding: const EdgeInsets.all(16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
                 children: [
                   Image.asset("images/detalhe_cliente.png"),
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.only(left: 10),
                     child: Text("Clientes",
                       style: TextStyle(
@@ -37,15 +37,15 @@ class _TelaClienteState extends State<TelaCliente> {
                 ],
               ),
               Padding(
-                padding: EdgeInsets.only(top: 16),
+                padding: const EdgeInsets.only(top: 16),
                 child: Image.asset("images/cliente1.png")
               ),
-              Text("Empresa de Software"),
+              const Text("Empresa de Software"),
               Padding(
-                  padding: EdgeInsets.only(top: 16),
+                  padding: const EdgeInsets.only(top: 16),
                   child: Image.asset("images/cliente2.png")
               ),
-              Text("Empresa de Auditoria"),
+              const Text("Empresa de Auditoria"),
             ],
           ),
         ),

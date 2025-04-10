@@ -20,9 +20,9 @@ class Api {
             'type':'video',
             'maxResults':'20',
             'order':'date',
-            'key':'$YOUTUBE_API_KEY',
-            'channelId':'$CHANNEL_ID',
-            'q':'$queryStr'
+            'key':YOUTUBE_API_KEY,
+            'channelId':CHANNEL_ID,
+            'q':queryStr
           }
         )
     );

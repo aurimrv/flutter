@@ -13,19 +13,19 @@ class _TelaServicoState extends State<TelaServico> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text("Serviços"),
+        title: const Text("Serviços"),
         backgroundColor: Colors.green,
       ),
       body: SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.all(16),
+          padding: const EdgeInsets.all(16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
                 children: [
                   Image.asset("images/detalhe_servico.png"),
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.only(left: 10),
                     child: Text("Nossos Serviços",
                       style: TextStyle(
@@ -36,15 +36,15 @@ class _TelaServicoState extends State<TelaServico> {
                   ),
                 ],
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(top: 16),
                 child: Text("Consultoria"),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(top: 16),
                 child: Text("Cálculo de Preços"),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(top: 16),
                 child: Text("Acompanhamento de Projetos"),
               ),

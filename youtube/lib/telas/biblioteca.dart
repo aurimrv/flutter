@@ -11,7 +11,7 @@ class _BibliotecaState extends State<Biblioteca> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text(
+      child: const Text(
         "Biblioteca",
         style: TextStyle(
             fontSize: 25

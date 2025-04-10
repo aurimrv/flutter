@@ -5,7 +5,7 @@ import 'package:youtube/model/video.dart';
 class Inicio extends StatefulWidget {
   String pesquisa;
 
-  Inicio( this.pesquisa );
+  Inicio( this.pesquisa, {super.key} );
 
   @override
   State<Inicio> createState() => _InicioState();
@@ -50,7 +50,7 @@ class _InicioState extends State<Inicio> {
           switch( snapshot.connectionState ) {
             case ConnectionState.none:
             case ConnectionState.waiting:
-              return Center(
+              return const Center(
                 child: CircularProgressIndicator(),
               );
             case ConnectionState.active:
@@ -63,7 +63,7 @@ class _InicioState extends State<Inicio> {
 
                       return GestureDetector(
                         onTap: (){
-                          print("Cliqued: " + video.id);
+                          print("Cliqued: ${video.id}");
                         },
                         child: Column(
                           children: [
@@ -84,13 +84,13 @@ class _InicioState extends State<Inicio> {
                         ),
                       );
                     },
-                    separatorBuilder: (context, index) => Divider(
+                    separatorBuilder: (context, index) => const Divider(
                       height: 2,
                       color: Colors.grey,
                     ),
                     itemCount: snapshot.data!.length);
               } else {
-                return Center(
+                return const Center(
                   child: Text("Nenhum dado para ser exibido."),
                 );
               }

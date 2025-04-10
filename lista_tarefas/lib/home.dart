@@ -13,9 +13,9 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   List _listaTarefas = [];
-  Map<String, dynamic> _ultimaTarefaRemovida = Map();
+  Map<String, dynamic> _ultimaTarefaRemovida = {};
 
-  TextEditingController _controllerTarefa = TextEditingController();
+  final TextEditingController _controllerTarefa = TextEditingController();
 
   Future<File> _getFile() async {
     final diretorio = await getApplicationDocumentsDirectory();
@@ -25,7 +25,7 @@ class _HomeState extends State<Home> {
   _salvarTarefa() {
     String novaTarefa = _controllerTarefa.text;
     // Recuperar lista da GUI
-    Map<String, dynamic> tarefa = Map();
+    Map<String, dynamic> tarefa = {};
     tarefa["titulo"] = novaTarefa;
     tarefa["realizada"] = false;
 
@@ -81,8 +81,8 @@ class _HomeState extends State<Home> {
 
           //Snackbar
           final snackbar = SnackBar(
-            duration: Duration(seconds: 5),
-            content: Text("Tarefa removida!!"),
+            duration: const Duration(seconds: 5),
+            content: const Text("Tarefa removida!!"),
             action: SnackBarAction(
               label: "Desfazer",
               onPressed: (){
@@ -99,8 +99,8 @@ class _HomeState extends State<Home> {
         },
         background: Container(
           color: Colors.red,
-          padding: EdgeInsets.all(16),
-          child: Row(
+          padding: const EdgeInsets.all(16),
+          child: const Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Icon(

@@ -11,7 +11,7 @@ class _InscricoesState extends State<Inscricoes> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text(
+      child: const Text(
         "Inscrições",
         style: TextStyle(
             fontSize: 25

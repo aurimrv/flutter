@@ -1,6 +1,4 @@
-import 'dart:ffi';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -11,8 +9,8 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  TextEditingController _controllerAlcool = TextEditingController();
-  TextEditingController _controllerGasolina = TextEditingController();
+  final TextEditingController _controllerAlcool = TextEditingController();
+  final TextEditingController _controllerGasolina = TextEditingController();
   var _message = "";
 
   double? _alcoolPrice = 0.0;
@@ -57,15 +55,15 @@ class _HomeState extends State<Home> {
       ),
       body: Container(
         child: SingleChildScrollView(
-          padding: EdgeInsets.all(32),
+          padding: const EdgeInsets.all(32),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Padding(
-                padding: EdgeInsets.only( bottom: 32 ),
+                padding: const EdgeInsets.only( bottom: 32 ),
                 child: Image.asset("./images/logo.png"),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only( bottom: 10 ),
                 child: Text(
                   "Saiba qual a melhor opção para abastecimento do seu carro.",
@@ -78,29 +76,32 @@ class _HomeState extends State<Home> {
               ),
               TextField(
                 keyboardType: TextInputType.number,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: "Preço Álcool, ex: 4.50",
                 ),
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 22,
                 ),
                 controller: _controllerAlcool,
               ),
               TextField(
                 keyboardType: TextInputType.number,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: "Preço Gasolina, ex: 6.50",
                 ),
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 22,
                 ),
                 controller: _controllerGasolina,
               ),
               Padding(
-                padding: EdgeInsets.only( top: 10 ),
+                padding: const EdgeInsets.only( top: 10 ),
                 child: TextButton(
                   onPressed: _calcular,
-                  child: Text(
+                  style: TextButton.styleFrom(
+                      backgroundColor: Colors.blueAccent
+                  ),
+                  child: const Text(
                     "Calcular",
                     style: TextStyle(
                       fontSize: 20,
@@ -109,16 +110,13 @@ class _HomeState extends State<Home> {
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  style: TextButton.styleFrom(
-                      backgroundColor: Colors.blueAccent
-                  ),
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(top: 20),
+                padding: const EdgeInsets.only(top: 20),
                 child: Text(
                   _message,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),

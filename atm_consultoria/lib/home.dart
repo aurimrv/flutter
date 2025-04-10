@@ -15,28 +15,28 @@ class _HomeState extends State<Home> {
   void _abrirEmpresa() {
     Navigator.push(
         context, 
-        MaterialPageRoute(builder: (context) => TelaEmpresa()),
+        MaterialPageRoute(builder: (context) => const TelaEmpresa()),
     );
   }
 
   void _abrirServico() {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => TelaServico()),
+      MaterialPageRoute(builder: (context) => const TelaServico()),
     );
   }
 
   void _abrirCliente() {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => TelaCliente()),
+      MaterialPageRoute(builder: (context) => const TelaCliente()),
     );
   }
 
   void _abrirContato() {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => TelaContato()),
+      MaterialPageRoute(builder: (context) => const TelaContato()),
     );
   }
 
@@ -45,18 +45,18 @@ class _HomeState extends State<Home> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text("ATM Consultoria"),
+        title: const Text("ATM Consultoria"),
         backgroundColor: Colors.blueAccent,
       ),
       body: Container(
-        padding: EdgeInsets.all(16),
+        padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset("images/logo.png"),
             Padding(
-                padding: EdgeInsets.only(top: 32),
+                padding: const EdgeInsets.only(top: 32),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -72,7 +72,7 @@ class _HomeState extends State<Home> {
                 ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 32),
+              padding: const EdgeInsets.only(top: 32),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
