@@ -1,0 +1,2 @@
+/home/auri/insync/StudioProjects/flutter/frases_do_dia/android/app/.cxx/Debug/3e6g3o6q/x86/CMakeFiles/edit_cache.dir
+/home/auri/insync/StudioProjects/flutter/frases_do_dia/android/app/.cxx/Debug/3e6g3o6q/x86/CMakeFiles/rebuild_cache.dir
